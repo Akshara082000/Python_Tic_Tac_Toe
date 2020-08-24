@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TIC TAC TOE</title>
+  <meta charset="utf-8">
+  <meta dev="Akshara">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static',filename='index.css')}}">
+</head>
+<body> 
+{% block body%}
+<div class="container">
+   <div class="Points">
+         <p>{{player}} Played</p>
+   </div>
+   <div class="Game">
+    {% if msg=='' %}
+    <form method="POST" action="/">
+      
+    <div class="grid-container">
+      <div class="grid-item"><button name="1" value="0,0">{{game[0][0]}}</button></div>
+      <div class="grid-item"><button name="1" value="0,1">{{game[0][1]}}</button></div>
+      <div class="grid-item grid-item3"><button name="1" value="0,2">{{game[0][2]}}</button></div>  
+      <div class="grid-item"><button name="1" value="1,0">{{game[1][0]}}</button></div>
+      <div class="grid-item"><button name="1" value="1,1">{{game[1][1]}}</button></div>
+      <div class="grid-item grid-item3"><button name="1" value="1,2">{{game[1][2]}}</button></div>  
+      <div class="grid-item grid-bott"><button name="1" value="2,0">{{game[2][0]}}</button></div>
+      <div class="grid-item grid-bott"><button name="1" value="2,1">{{game[2][1]}}</button></div>
+      <div class="grid-item grid-bott grid-item3"><button name="1" value="2,2">{{game[2][2]}}</button></div>  
+    </div>
+    </form>
+    {% endif %}
+    {% if msg=="Win" %}
+      <div class="Win"><p>Winner is {{win}}</p></div>
+    {% endif %}
+    {% if msg=="Draw" %}
+    <div class="Win"><p>Match Draw</p></div>
+    {% endif %}
+   </div>
+   <div class="Buttons">
+     <form method="POST" action="/restart/">
+        <div><button name="button">Restart</button></div>
+     </form>
+   </div>
+</div>
+{% endblock %}
+</body>
+</html>

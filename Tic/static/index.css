@@ -1,0 +1,55 @@
+.container{
+    display: grid;
+    grid-template-rows: 70px 370px 50px;
+    width:700px;
+    height:500px;
+    margin-left: 27%;
+    margin-top:7%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+.Points{
+    background-color: antiquewhite;
+}
+p{
+    font-size: 100px;
+    font-weight: 300;
+    text-align: center;
+}
+.Game{
+    background-color: teal;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: relative;
+    top:5%;
+    padding: 10px;
+  }
+  .grid-item {
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    padding: 20px;
+    font-size: 30px;
+    color:white;
+    text-align: center;
+  }
+  .grid-item3{
+      border-right: none;
+  }
+  .grid-bott{
+      border-bottom: none;
+  }
+.grid-container button{
+    background-color: teal;
+    height:50px;
+    width:50px;
+    border:none;
+    font-size: 50px;
+    font-weight: 300px;
+    color:white;
+}
+.Buttons button{
+    height:58px;
+    width:700px;
+}
